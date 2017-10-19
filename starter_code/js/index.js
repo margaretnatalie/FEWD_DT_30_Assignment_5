@@ -66,6 +66,3 @@ $(document).ready(function() {
 //when correct image is called, image is then displayed in the background
 
 // make sure that the values of the images are correct
-
-
-console.log('fuck me up')
