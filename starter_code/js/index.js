@@ -1,35 +1,47 @@
-//wait for the DOM elements to load before executing
 $(document).ready(function() {
-  //prevent the submit button from refreshing the page
+  //'event.preventDefault' prevents the submit button from refreshing the page
   $('#submit-btn').click(function(){
     event.preventDefault();
-    //get the value of the #city-type input and fix for capitalization
+    //get the value of the #city-type input
     var city = $('#city-type').val();
+    //clears the input placeholder after you have pressed submit
     $('#city-type').val('');
-    // we can use toLowerCase() to evaluate the input as a lower case input
-    city = city.toLowerCase();
-    // if the user inputs New York City / NYC / New York change the CSS class to 'nyc'
+    // if the user inputs New York City / NYC / New York, it will change the background image of the body to class defined in CSS to 'nyc' image
     if(city == 'new york city' || city == 'nyc' || city == 'new york') {
       $('body').attr('class','nyc');
     }
-    // if the user inputs SF/San Francisco/Bay Area change the CSS class to 'sf'
+    // if the user inputs SF/San Francisco/Bay Area, it will change the background image of the body class defined in CSS to 'sf' image 
     else if (city == 'sf' || city == 'san francisco' || city == 'bay area') {
       $('body').attr('class','sf');
     }
-    // if the user inputs Austin/ATX change the CSS class to 'austin'
+    // if the user inputs Austin/ATX, it will change the background image of the body class defined in CSS to 'austin' image
     else if (city == 'austin' || city == 'atx') {
       $('body').attr('class','austin');
     }
-    // if the user inputs Los Angeles/LA/LAX change the CSS class to 'la'
+    // if the user inputs Los Angeles/LA/LAX, it will change the background image of the body class defined in CSS to 'la' image
     else if (city == 'los angeles' || city == 'la' || city == 'lax') {
       $('body').attr('class','la');
     }
-    // if the user inputs Sydney/SYD change the CSS class to 'sydney'
+    // if the user inputs Sydney/SYD, it will change the background image of the body class defined in CSS to 'sydney' image
     else if (city == 'sydney' || city == 'syd' || city == 'opera house') {
       $('body').attr('class','sydney');
     }
   });
 });
+
+// Notes about the JS: the images that the submit button displays in the backgroung are defined in the CSS. There are other ways of doing it. 
+
+// $(document).ready(function(){
+//   $('#submit-btn').click(function(){
+//     event.preventDefault();
+//     var city = $('#city-type').val();
+//     if(city =='new york city' || city == 'nyc' || city == 'new york') {
+//       $('body').attr('images','nyc.jpg')
+//     }
+
+
+//   })
+// })
 
 //notes from the sketch 
 //$(document).ready(function() {
@@ -43,6 +55,7 @@ $(document).ready(function() {
 // var city = ['austin.jpg','la.jpg','nyc.jpg','sf.jpg','sydney.jpg']
 // $("") 
 // })
+// 
 
 
 
