@@ -2,7 +2,7 @@ $(document).ready(function() {
   //'event.preventDefault' prevents the submit button from refreshing the page
   $('#submit-btn').click(function(){
     event.preventDefault();
-    //get the value of the #city-type input
+    //gets the value of the #city-type input
     var city = $('#city-type').val();
     //clears the input placeholder after you have pressed submit
     $('#city-type').val('');
